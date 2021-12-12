@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Doombuilder</string>
+    <string name="create_a_file">Create a file</string>
+    <string name="nothing">Nothing is happening currently</string>
+    <string name="save_successful">File have been successfully saved</string>
+    <string-array name="pwad_iwad"><item>PWAD</item><item>IWAD</item></string-array>
+    <string-array name="mapslot">
+        <item>MAP01</item>
+        <item>MAP02</item>
+        <item>MAP03</item>
+        <item>MAP04</item>
+        <item>MAP05</item>
+        <item>MAP06</item>
+        <item>MAP07</item>
+        <item>MAP08</item>
+        <item>MAP09</item>
+        <item>MAP10</item>
+        <item>MAP11</item>
+        <item>MAP12</item>
+        <item>MAP13</item>
+        <item>MAP14</item>
+        <item>MAP15</item>
+        <item>MAP16</item>
+        <item>MAP17</item>
+        <item>MAP18</item>
+        <item>MAP19</item>
+        <item>MAP20</item>
+        <item>MAP21</item>
+        <item>MAP22</item>
+        <item>MAP23</item>
+        <item>MAP24</item>
+        <item>MAP25</item>
+        <item>MAP26</item>
+        <item>MAP27</item>
+        <item>MAP28</item>
+        <item>MAP29</item>
+        <item>MAP30</item>
+        <item>MAP31</item>
+        <item>MAP32</item>
+    </string-array>
+</resources>
