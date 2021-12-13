@@ -1,19 +1,24 @@
 package awesome.vulldozer.doombuilder;
 
-import android.util.Log;
-
-import java.nio.file.ClosedWatchServiceException;
-
 public class DirectoryList
 {
-    private static final String TAG = "Stuff";
+    //region Variables
     private Directory[] directories;
     private int count;
-
+    //endregion
+    //region Getters and Setters
+    public Directory[] getDirectories() { return directories; }
+    public int getCount() { return count; }
+    public void setDirectories(Directory[] directories) { this.directories = directories; }
+    public void setCount(int count) { this.count = count; }
+    //endregion
+    //region Constructors
     public DirectoryList()
     {
         this.count = 0;
     }
+    //endregion
+    //region Functions
     public void addDirectory(Directory directory) // Adds a new directory to the list
     {
         Directory[] newDirectories = new Directory[count + 1];
@@ -55,7 +60,27 @@ public class DirectoryList
         {
             byteList.addByteArray(directories[i].toByteArray());
         }
-        Log.w(TAG, "toByteArray: successs");
         return byteList.getBytes();
     }
+    public void addToDirectorySize(String directoryName,int size)
+    {
+        for(int i = 0;i < directories.length;i++)
+        {
+            if (directories[i].getName() == directoryName)
+            {
+                directories[i].setSize(directories[i].getSize() + size);
+            }
+        }
+    }
+    public void addToElseFilepos(String directoryName, int size)
+    {
+        for(int i = 0;i < directories.length;i++)
+        {
+            if (directories[i].getName() == directoryName)
+            {
+                directories[i].setFilepos(directories[i].getFilepos() + size);
+            }
+        }
+    }
+    //endregion
 }

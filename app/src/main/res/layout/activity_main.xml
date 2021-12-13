@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <TextView
         android:id="@+id/infoText"
         android:layout_width="wrap_content"
@@ -51,11 +50,18 @@
         android:layout_height="65dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="File name"
+        android:text="Filename"
         app:layout_constraintTop_toBottomOf="@+id/mapslot"
         app:layout_constraintStart_toStartOf="parent"/>
 
-
+    <Button
+        android:id="@+id/thingspopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="thingsButtonClicked"
+        android:text="Things"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapname" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

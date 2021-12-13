@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Add Thing"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/xpos"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/header_title"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="xPos"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/ypos"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/xpos"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="yPos"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/anglenum"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/ypos"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="angle"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/typenum"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/anglenum"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="type"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/flagsnum"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/typenum"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="flags"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flagsnum"
+        android:text="Create"
+        android:onClick="createThingButtonClicked"/>
+
+</RelativeLayout>

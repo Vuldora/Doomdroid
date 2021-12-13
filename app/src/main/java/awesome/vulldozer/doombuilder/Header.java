@@ -4,9 +4,11 @@ import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 
 public class Header {
+    //region Variables
     private String identification ; // The ASCII characters "IWAD" or "PWAD".
     private int numlumbs; // An integer specifying the number of lumps in the WAD.
     private int infotableofs; // An integer holding a pointer to the location of the directory.
+    //endregion
     //region Getters and Setters
     public String getIdentification() { return this.identification; }
     public int getNumlumbs() { return this.numlumbs; }
@@ -15,6 +17,7 @@ public class Header {
     public void setNumlumbs(int numlumbs) { this.numlumbs = numlumbs; }
     public void setInfotableofs(int infotableofs) {this.infotableofs = infotableofs; }
     //endregion
+    //region Constructors
     public Header() {} // Construct an empty header
     public Header(String identification, int numlumbs, int infotableofs) // Construct a header
     {
@@ -22,6 +25,8 @@ public class Header {
         this.numlumbs = numlumbs;
         this.infotableofs = infotableofs;
     }
+    //endregion
+    //region Functions
     public byte[] toByteArray()
     {
         byte[] identificationBytes = identification.getBytes(StandardCharsets.US_ASCII);
@@ -51,4 +56,5 @@ public class Header {
         }
         return headerBytes;
     }
+    //endregion
 }

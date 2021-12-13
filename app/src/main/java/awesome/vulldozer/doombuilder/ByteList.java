@@ -1,20 +1,23 @@
 package awesome.vulldozer.doombuilder;
 
-import androidx.annotation.NonNull;
-
 public class ByteList {
+    //region Variables
     private byte[] bytes;
     private int count;
+    //endregion
     //region Getters and Setters
     public byte[] getBytes() { return bytes; }
     public int getCount() { return count; }
     public void setBytes(byte[] bytes) { this.bytes = bytes; }
     public void setCount(int count) { this.count = count; }
     //endregion
+    //region Constructors
     public ByteList()
     {
         count = 0;
     }
+    //endregion
+    //region Functions
     public void addByteArray(byte[] byteArray)
     {
         int i;
@@ -30,4 +33,5 @@ public class ByteList {
         count += byteArray.length;
         bytes = newBytes;
     }
+    //endregion
 }

@@ -1,15 +1,15 @@
 package awesome.vulldozer.doombuilder;
 
-import android.util.Log;
-
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 
 public class Directory
 {
+    //region Variables
     private int filepos; // An integer holding a pointer to the start of the lump's data in the file.
     private int size; // An integer representing the size of the lump in bytes.
     private String name; //  An ASCII string defining the lump's name. Only the characters A-Z (uppercase), 0-9, and [ ] - _ should be used in lump names (an exception has to be made for some of the Arch-Vile sprites, which use "\"). When a string is less than 8 bytes long, it should be null-padded to the eighth byte. Values exceeding 8 bytes are forbidden.
+    //endregion
     //region Getters and Setters
     public int getFilepos() { return this.filepos; }
     public int getSize () { return this.size; }
@@ -18,6 +18,7 @@ public class Directory
     public void setSize(int size) { this.size = size; }
     public void  setName(String name) { this.name = name; }
     //endregion
+    //region Constructors
     public Directory()
     {
         filepos = 0;
@@ -30,6 +31,8 @@ public class Directory
         this.size = size;
         this.name = name;
     }
+    //endregion
+    //region Functions
     public byte[] toByteArray()
     {
         byte[] fileposBytes = ByteBuffer.allocate(4).putInt(filepos).array();
@@ -60,4 +63,5 @@ public class Directory
         }
         return directoryBytes;
     }
+    //endregion
 }
