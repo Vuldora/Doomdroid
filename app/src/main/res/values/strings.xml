@@ -3,6 +3,9 @@
     <string name="create_a_file">Create a file</string>
     <string name="nothing">Nothing is happening currently</string>
     <string name="save_successful">File have been successfully saved</string>
+    <string name="save">Save</string>
+    <string name="filename">Filename</string>
+    <string name="create_new_map">Create new map</string>
     <string-array name="pwad_iwad"><item>PWAD</item><item>IWAD</item></string-array>
     <string-array name="mapslot">
         <item>MAP01</item>

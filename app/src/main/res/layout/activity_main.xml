@@ -19,12 +19,10 @@
         android:id="@+id/saver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="240dp"
         android:onClick="saverButtonClicked"
-        android:text="@string/create_a_file"
+        android:text="@string/save"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/mapname"/>
 
     <Spinner
         android:id="@+id/pwad_iwad"
@@ -48,20 +46,22 @@
         android:id="@+id/mapname"
         android:layout_width="185dp"
         android:layout_height="65dp"
+        android:autofillHints="Test.wad"
         android:ems="10"
+        android:hint="@string/filename"
         android:inputType="textPersonName"
-        android:text="Filename"
-        app:layout_constraintTop_toBottomOf="@+id/mapslot"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newmap" />
 
     <Button
-        android:id="@+id/thingspopup"
+        android:id="@+id/newmap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="thingsButtonClicked"
-        android:text="Things"
+        android:onClick="newmapButtonClicked"
+        android:text="@string/create_new_map"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapname" />
+        app:layout_constraintTop_toBottomOf="@+id/mapslot" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

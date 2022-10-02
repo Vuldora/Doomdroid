@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/flagsnum"
-        android:text="Create"
-        android:onClick="createThingButtonClicked"/>
+        android:onClick="createThingButtonClicked"
+        android:text="Create" />
 
 </RelativeLayout>

@@ -24,11 +24,20 @@ public class Archive {
         Map map = new Map(name);
         mapList.addMap(map);
         header.setNumlumbs(header.getNumlumbs() + 6);
+        header.setInfotableofs(header.getInfotableofs() + 12);
     }
     public void addMap(Map map)
     {
         mapList.addMap(map);
         header.setNumlumbs(header.getNumlumbs() + map.getDirectoryList().getCount());
     }
+    public byte[] toByteArray()
+    {
+        ByteList byteList = new ByteList();
+        byteList.addByteArray(header.toByteArray());
+        byteList.addByteArray(mapList.toByteArray());
+        return byteList.getBytes();
+    }
     //endregion
+
 }

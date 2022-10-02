@@ -23,10 +23,20 @@ public class MapList {
             newMaps[i].setDirectoryList(this.maps[i].getDirectoryList());
             newMaps[i].setThingList(this.maps[i].getThingList());
         }
-        newMaps[count].setDirectoryList(maps[count].getDirectoryList());
-        newMaps[count].setThingList(maps[count].getThingList());
+        newMaps[count] = map;
+        //newMaps[count].setThingList(map.getThingList());
         count++;
         maps = newMaps;
     }
+    public byte[] toByteArray()
+    {
+        ByteList byteList = new ByteList();
+        for (int i = 0;i < maps.length;i++)
+        {
+            byteList.addByteArray(maps[i].toByteArray());
+        }
+        return byteList.getBytes();
+    }
     //endregion
+
 }
